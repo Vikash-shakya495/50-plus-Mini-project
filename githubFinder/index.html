@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body class="white">
+    <div class="container">
+        <h1><i class="fab fa-github"></i> GitHub Profile Finder</h1>
+        <div class="nav-panel">
+            <div class="theme-selector">
+                <i class="fas fa-paint-brush"></i>
+                <select id="theme-selector" onchange="changeTheme()">
+                    <option value="white">Default (White)</option>
+                    <option value="dark">Dark</option>
+                    <option value="blue">Blue</option>
+                    <option value="orange">Orange</option>
+                </select>
+            </div>
+
+            <div class="search-bar">
+                <i class="fas fa-user"></i>
+                <input type="text" id="username" placeholder="Enter GitHub username">
+                <button id="search"><i class="fas fa-search"></i> Search</button>
+            </div>
+        </div>
+        <div class="loader" id="loader" style="display: none;"></div>
+
+        <div class="content">
+            <div id="profile" class="card"></div>
+            <div id="repos" class="repo-container"></div>
+        </div>
+
+        <div class="pagination">
+            <button class="page-button" id="prev-page" disabled><i class="fas fa-chevron-left"></i> Previous</button>
+            <button class="page-button" id="next-page">Next <i class="fas fa-chevron-right"></i></button>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

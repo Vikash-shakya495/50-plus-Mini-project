@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Duck Hunting Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Set the Background Image -->
+    <div class="mainPanel">
+        <h1><img class="huntDuckLogo" src="./img/huntDuckLogo.png" alt=""></h1>
+        <div class="duckImageDiv">
+            <img id="bird1" class="birds" src="img/bird1.gif" onclick="downBird(this.id)">
+            <img id="bird2" class="birds" src="img/bird2.gif" onclick="downBird(this.id)">
+        </div>
+        <img class="movingDog" src="./img/movingDog.gif" alt="">
+        <img class="smellingDog" src="./img/smellingDog.gif" alt="">
+        <img class="jumpDog" src="./img/jumpDog.png" alt="">
+        <div class="dogHunt"></div>
+        <button id="startButton" class="startBtn">Start Game</button>
+        <button id="restartBtn" class="restartBtn">Restart</button>
+        <div class="scoreBoard">Score: <span id="score">0</span></div>
+        <div id="resultMessage"></div>
+        <audio id="fireSound">
+            <source src="sounds/fire3.mp3" type="audio/mp3">
+        </audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

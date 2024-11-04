@@ -1,0 +1,133 @@
+/* General styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+::-webkit-scrollbar{
+    scrollbar-width: none;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('./images/bgImage.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: yellow;
+    text-shadow: 0px 0px 5px black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.test-area {
+    /* background: #ffffff2f; */
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    /* max-width: 500px; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.paragraph {
+    font-size: 1rem;
+    color: #ffffff;
+    padding: 1rem;
+    background-color: #0e0f0fd7;
+    border-radius: 8px;
+    height: 150px;
+    font-size: 2rem;
+    position: relative;
+}
+
+.input-area {
+    width: 100%;
+    padding: 1rem;
+    font-size: 2rem;
+    border: 2px solid #d1d9e6;
+    color: #fffb00;
+    background-color: #0e0f0fd8;
+    border-radius: 8px;
+    resize: none;
+    height: 150px;
+}
+
+.input-area:focus {
+    outline: none;
+    border-color: #096cdc;
+    box-shadow: 0 0 5px rgba(0, 119, 255, 0.3);
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.button {
+    height: 70px;
+    width: 300px;
+    font-size: 2rem;
+    color: #fff;
+    background-color: #1a74dca0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #117ce8;
+}
+
+.level-selector {
+    display: flex;
+    background-color: rgba(128, 128, 128, 0.412);
+    border-radius: 20px;
+    gap: 1rem;
+}
+
+.level-selector label {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    padding: 20px;
+    color: #eceaea;
+}
+.level-selector input[type="radio"]{
+    height: 30px;
+    width: 30px;
+}
+.results {
+    display: flex;
+    justify-content: space-around;
+    font-size: 3rem;
+    color: #c5d60c;
+    font-weight: bold;
+}
+
+.cell-highlight {
+    background-color: #40d20f;
+    color: black;
+    border-radius: 4px;
+}
+
+

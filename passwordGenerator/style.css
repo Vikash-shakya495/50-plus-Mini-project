@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(91, 8, 207);
+    overflow: hidden;
+}
+
+.container {
+    border-radius: 10px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+}
+
+.bgImg {
+    position: absolute;
+    top: -4%;
+    left: 10%;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg) 
+    translate(70%, 0%) rotateZ(-40deg);
+}
+
+h1 {
+    font-size: 50px;
+    width: 400px;
+    margin-top: 30px;
+    line-height: 80px;
+    margin-left: 100px;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 0px 0px 20px #001524;
+    z-index: 2;
+}
+
+.passwordMaker {
+    width: 40%;
+    background-color: #04172cc4;
+    height: 100%;
+    padding: 40px 80px;
+    border-radius: 40px;
+}
+
+.passwordMaker div {
+    display: flex;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+    color: #e9af11;
+}
+
+label[for="length"] {
+    font-size: 30px;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+}
+
+div {
+    margin: 10px 0;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button {
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#generate {
+    padding:10px 20px;
+    background-color: #0f9a1b;
+    width: 70%;
+}
+
+#copy {
+    padding: 10px 14px;
+    background-color: orange;
+    color: #001524;
+    width: 15%;
+}
+
+#copy img {
+    width: 100%;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+.pass-handle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pass-handle p {
+    width: 80%;
+}
+
+#password {
+    font-size: 1.5em;
+    font-weight: bold;
+    background: #e0eafc;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    border: 2px solid #007bff;
+    color: #04172c;
+}
+
+.shape {
+    clip-path: polygon(50% 0, 100% 50%,
+     50% 100%, 0 50%);
+    background-color: #e9af11;
+    height: 300px;
+    width: 200px;
+}
+
+@media (max-width: 1024px) {
+    .passwordMaker {
+        width: 50%;
+    }
+
+    h1 {
+        font-size: 40px;
+        width: 300px;
+    }
+
+    #password {
+        font-size: 1.2em;
+    }
+    #copy {
+        padding: 2px 8px;
+    }
+}
+@media (max-width: 800px) {
+    .container{
+        overflow-y: auto;
+    }
+    .flex-container{
+        margin-top: 300px;
+        flex-direction: column;
+    }
+    .bgImg{
+        clip-path: polygon(50% 0, 100% 
+        50%, 50% 100%, 0 10%);
+    }
+    .passwordMaker{
+        width: 60%;
+    }
+    h1{
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    .bgImg{
+        clip-path: polygon(50% 0, 100% 
+        50%, 50% 100%, 0 10%);
+        transform: rotateY(180deg) 
+        translate(90%, -10%) rotateZ(-40deg);
+    }
+    .flex-container{
+        margin-top: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    .bgImg{
+        display: none;
+    }
+
+    #password {
+        font-size: 1.2em;
+    }
+
+    button {
+        padding: 12px;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .bgImg {
+        width: 100%;
+        height: 300px;
+    }
+
+    .passwordMaker {
+        /* margin: 20px 0; */
+        padding: 40px 40px;
+        width: 80%;
+    }
+}

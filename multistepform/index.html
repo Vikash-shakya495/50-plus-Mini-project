@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Form with Progress Bar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 class="heading">Multistep form</h2>
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+        <div id="num1" class="number">1</div>
+        <div id="num2" class="number">2</div>
+        <div id="num3" class="number">3</div>
+        <div id="num4" class="number">4</div>
+        <form id="multiStepForm">
+            <div class="step active">
+                <h2>User Details</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <div class="step">
+                <h2>Address Details</h2>
+                <label for="address">Address:</label>
+                <input type="text" id="address" required>
+                <label for="city">City:</label>
+                <input type="text" id="city" required>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <div class="step">
+                <h2>Payment Details</h2>
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" required>
+                <label for="expiry">Expiry Date:</label>
+                <input type="text" id="expiry" placeholder="MM/YY" required>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <div class="step">
+                <h2>Review Your Information</h2>
+                <p>Please review your details:</p>
+                <div id="confirmationDetails"></div>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Finish</button>
+            </div>
+
+            <div class="step">
+                <h2>Confirmation</h2>
+                <p>Your form has been submitted successfully!</p>
+                <button type="button" class="prev-btn">Back to Form</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("Ex1rJq5YDu2Ju0czD"); // Your EmailJS User ID
+        })();
+    </script>
+</body>
+</html>

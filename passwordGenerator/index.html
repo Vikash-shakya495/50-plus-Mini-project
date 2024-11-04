@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="flex-container">
+            <div class="bgImg">
+                <spline-viewer url="https://prod.spline.design/okVfn4VNs38UxLxB/scene.splinecode"></spline-viewer>
+            </div>
+                <h1>Password Generator App</h1>
+            <div class="passwordMaker">
+                <label for="length">Password Length: <span id="length-display">12</span></label>
+                <input type="range" id="length" value="12" min="8" max="20">
+
+                <div>
+                    <input type="checkbox" id="uppercase" checked>
+                    <label for="uppercase">Include Uppercase Letters</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="lowercase" checked>
+                    <label for="lowercase">Include Lowercase Letters</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="numbers" checked>
+                    <label for="numbers">Include Numbers</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="special" checked>
+                    <label for="special">Include Special Characters</label>
+                </div>
+
+                <button id="generate">Generate Password</button>
+                <h2>Your Password:</h2>
+                <div class="pass-handle">
+                    <p id="password"></p>
+
+                    <button id="copy"><img src="./images/copy.png" alt="copy password"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.32/build/spline-viewer.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

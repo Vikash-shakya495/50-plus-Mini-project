@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Typing Speed Test</h1>
+        <div class="test-area">
+            <div class="controls">
+                <div class="level-selector">
+                    <label>
+                        <input type="radio" name="level" class="expert" value="120" onchange="selectLevel()"><span>2</span> min
+                    </label>
+                    <label>
+                        <input type="radio" name="level" class="intermediate" value="60" onchange="selectLevel()"><span>1</span> min
+                    </label>
+                    <label>
+                        <input type="radio" name="level" class="beginner" value="30" onchange="selectLevel()"><span>30</span> sec
+                    </label>
+                </div>
+                <button id="start-test" class="button">Start Test</button>
+            </div>
+            <div id="paragraph" class="paragraph"></div>
+            <textarea id="input-area" class="input-area" rows="5" disabled ></textarea>
+
+            <div class="results">
+                <p>Time: <span id="time-display">0</span> seconds</p>
+                <p>WPM: <span id="wpm-display">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

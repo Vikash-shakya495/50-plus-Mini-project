@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotlight Effect</title>
+    <style>
+        :root{
+            --bg-color: rgba(19, 18, 18, 0.795);
+        }
+        body {
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .spotlight-text {
+            font-size: 100px;
+            font-weight: bold;
+            color: #505050;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .light{
+            position: fixed;
+            top: 40%;
+            width: 120%;
+            height: 20%;
+            transform: tra;
+            pointer-events: none;
+            background: radial-gradient(circle at 50% 50%, transparent 10%, var(--bg-color) 20%);
+            animation: spotlight 4s linear infinite;
+        }
+        @keyframes spotlight {
+            0%{
+                transform: translateX(0%);
+            }
+            20%{
+                transform: translateX(10%);
+            }
+            80%{
+                transform: translateX(-10%);
+            }
+            100%{
+                transform: translateX(0%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="spotlight-text">
+        Coding Ninjas
+    </div>
+    <div class="light"></div>
+</body>
+</html>

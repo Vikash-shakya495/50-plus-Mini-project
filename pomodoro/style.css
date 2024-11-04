@@ -1,0 +1,86 @@
+/* style.css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f3;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    width: 320px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin-bottom: 1rem;
+    color: #ff6b6b;
+}
+
+.timer {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+}
+
+.progress-ring svg {
+    width: 120px;
+    height: 120px;
+}
+
+.progress-ring__circle {
+    fill: none;
+    stroke: #ff6b6b;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.35s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+.time-display {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: #333;
+}
+
+.cycle-buttons button, .control-buttons button {
+    font-size: 1rem;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cycle-buttons button.active, .cycle-buttons button:hover, .control-buttons button:hover {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.cycle-buttons button {
+    background-color: #f0f0f3;
+    color: #333;
+}
+
+.control-buttons button {
+    background-color: #ff6b6b;
+    color: white;
+}

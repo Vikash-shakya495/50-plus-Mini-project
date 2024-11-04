@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background: url('https://i.pinimg.com/originals/6b/6d/c2/6b6dc2cf132ca0e9fc1ad397e59edb68.gif') no-repeat center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #eed4ee;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.quote_container {
+    background: rgba(246, 232, 232, 0.85);
+    height: 400px; /* Fixed height for consistency */
+    max-width: 600px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(2, 108, 255, 0.962);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    justify-content: space-around; /* Ensure even spacing of content */
+    font-size: 1.2em;
+}
+
+.circle1, .circle2 {
+    background: linear-gradient(120deg, #fbe6a6, #ffdecb, #f8a9ce, #d38bf4);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 4em;
+    position: absolute;
+}
+
+.circle1 {   
+    top: -20px;
+    left: 20px;
+}
+
+.circle2 {
+    bottom: -20px;
+    right: 20px;
+}
+
+.user-img {
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    background: linear-gradient(45deg, #fab301, #fa5c01, #f90275, #ac01fc);
+    padding: 5px;
+    position: absolute;
+    top: -50px;
+    left: 40%;
+    transform: translateX(-50%);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.user-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.quote {
+    margin-top: 100px; /* Ensures image doesn't overlap */
+    font-size: 1.3em;
+}
+
+.name, .city {
+    font-weight: bold;
+    font-size: 1.1em;
+}.bar {
+    width: 0%;
+    height: 5px;
+    background: linear-gradient(45deg, #ac01fc, #f90275, #fa5c01, #f8f803);
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    animation: fillBar 5s linear infinite;
+}
+
+/* Keyframes for the bar's width transition */
+@keyframes fillBar {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 96%;
+    }
+}
+
+
+@keyframes anime {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+}
+
+/* Animation pause for image */
+@keyframes anime-img {
+    0% {
+        transform: translateY(40px);
+    }
+    70% {
+        transform: translateY(-65px); /* Reach top */
+    }
+    85% {
+        transform: translateY(-65px); /* Pause at top */
+    }
+    100% {
+        transform: translateY(0); /* Back to normal */
+    }
+}
+
+.user-img {
+    animation: anime-img 5s ease-out infinite;
+}
+
+.user-img, .quote, .name, .city {
+    animation: anime 5s ease-out infinite;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .quote_container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .user-img {
+        width: 100px;
+        height: 100px;
+        top: -55px;
+    }
+
+    .quote {
+        font-size: 1.1em;
+    }
+
+    .name, .city {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .quote_container {
+        padding: 15px;
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .user-img {
+        width: 80px;
+        height: 80px;
+        top: -45px;
+    }
+
+    .quote {
+        margin-top: 60px;
+        font-size: 1em;
+    }
+
+    .name, .city {
+        font-size: 0.9em;
+    }
+}

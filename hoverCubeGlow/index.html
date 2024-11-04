@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Glow on Hover</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(27, 1, 36);
+        }
+        .colorContainer{
+            display: flex;
+            flex-wrap: wrap;
+            width: 400px;
+            gap: 8px;
+        }
+        .colorContainer div{
+            width: 12px;
+            height: 12px;
+            background-color: rgba(70, 69, 69, 0.329);
+            transition: box-shadow 0.3s ease, background-color 0.5s ease; /* Smooth transitions */
+        }
+        .colorContainer div:hover {
+            box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="colorContainer"></div>
+    </div>
+    <script>
+        const container = document.querySelector('.colorContainer');
+
+        function generateRandomColor() {
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            return `rgb(${r}, ${g}, ${b})`;
+        }
+
+        // Add 528 divs
+        for (let i = 0; i < 400; i++) {
+            const box = document.createElement('div');
+            container.append(box);
+
+            // Add hover events for glowing and fading effect
+            box.addEventListener('mouseenter', () => {
+                const randomColor = generateRandomColor();
+                box.style.backgroundColor = randomColor; // Glow with random color
+            });
+
+            box.addEventListener('mouseleave', () => {
+                setTimeout(() => {
+                    box.style.backgroundColor = "rgb(70, 69, 69)"; // Fade back to dull color
+                }, 500); // Delay before fading
+            });
+        }
+    </script>
+</body>
+</html>

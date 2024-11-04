@@ -1,0 +1,312 @@
+@media screen and (max-width: 1290px) {
+    main {
+        padding: 20px 20px;
+        width: 100%;
+        gap: 5%;
+    }
+
+    main aside img {
+        width: 280px;
+        height: 280px;
+    }
+
+    .skills .services {
+        width: 60%;
+        padding: 40px 40px;
+        gap: 20px;
+    }
+
+    .services .buttons button {
+        padding: 20px 40px;
+    }
+
+    .resume {
+        padding: 80px 80px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    nav {
+        width: 100%;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    main {
+        padding: 10px 20px;
+        gap: 50px;
+    }
+
+    .main-banner {
+        width: 600px;
+    }
+
+    main aside img {
+        width: 260px;
+        height: 260px;
+    }
+
+    .resume {
+        flex-wrap: wrap;
+    }
+
+    .skills .services {
+        width: 80%;
+        padding: 60px 60px;
+        gap: 20px;
+    }
+
+}
+
+@media screen and (max-width: 1060px) {
+    nav {
+        gap: 60px;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    .main-banner {
+        width: 400px;
+    }
+
+    .main-banner h1 {
+        font-size: 30px;
+    }
+
+    .main-banner h2 {
+        font-size: 30px;
+    }
+
+    .main-banner h3 {
+        font-size: 30px;
+    }
+
+    .main-banner p {
+        font-size: 12px;
+    }
+
+    main aside img {
+        width: 220px;
+        height: 220px;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.1);
+        }
+
+        70% {
+            transform: scale(1);
+        }
+
+        90% {
+            transform: scale(1.1);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .skills {
+        flex-direction: column;
+    }
+
+    .skills .having_services {
+        width: 80%;
+        justify-content: center;
+    }
+
+    .projects {
+        padding: 80px 20px;
+    }
+
+    .projects .projects_list {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    nav {
+        gap: 40px;
+    }
+
+    nav ul li:nth-child(1) {
+        visibility: hidden;
+    }
+
+    main {
+        padding: 0 20px;
+    }
+
+    main .main-banner {
+        padding: 80px 0px;
+    }
+
+    .skills .having_services {
+        width: 100%;
+    }
+
+    .achievements {
+        padding: 60px 20px;
+    }
+
+    .achievements_list {
+        width: 100%;
+    }
+
+    nav ul li:hover::after {
+        width: 10vw;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    main aside img{
+        width: 200px;
+        height: 200px;
+    }
+    nav img {
+        display: none;
+    }
+
+    nav ul li:nth-child(1) {
+        visibility: visible;
+    }
+
+    .skills {
+        padding: 60px 20px;
+    }
+
+    .skills .services {
+        align-items: center;
+        padding: 40px 40px;
+        width: 90%;
+    }
+
+    .projects {
+        padding: 60px 0px;
+    }
+
+    .projects .projects_list {
+        padding: 10px 0px;
+        gap: 40px;
+    }
+
+    .achievements {
+        padding: 40px 10px;
+    }
+
+    .achievements_list {
+        width: 100%;
+        padding: 10px 0px;
+    }
+
+    .achievement {
+        width: 360px;
+    }
+
+    .achievement img {
+        height: 220px;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    nav ul {
+        position: fixed;
+        top: 0;
+        left: -300px;
+        z-index: 10;
+        flex-direction: column;
+        background-color: black;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 100vh;
+        transition: left 0.5s ease;
+    }
+    
+    nav img{
+        display: inline-block;
+    }
+    nav:hover ul {
+        left: 0;
+    }
+    nav ul li:hover::after {
+        position: absolute;
+        /* border-radius: 50%; */
+        margin-bottom: -40px;
+        top: auto;
+        width: 20vw;
+        transition: all ease-in-out 0.5s;
+    }
+}
+
+@media screen and (max-width: 700px){
+    main{
+        padding: 40px 20px;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    main aside{
+        margin-top: 40px;
+    }
+    .main-banner{
+        align-items: center;
+    }
+    .main-banner{
+        text-align: center;
+    }
+    .resume img{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .qualification_section {
+        padding: 40px 40px;
+    }
+    .qualification_list {
+        width: 100%;
+        padding: 0px 0px;
+    }
+    .qualification {
+        padding: 30px 40px;
+        justify-content: center;
+        gap: 30px;
+    }
+    .resume .resume_desc{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 460px){
+    .main-banner{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .resume{
+        padding: 10px 10px;
+    }
+    .resume .resume_desc{
+        width: 98%;
+        flex-wrap: wrap;
+    }
+    .resume_desc .buttons{
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 340px){
+    .resume_desc h1{
+        font-size: 3rem;
+        text-shadow: 2px -2px 2px black;
+    }
+}

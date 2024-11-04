@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    scrollbar-width: none;
+}
+nav{
+    height: 15vh;
+    width: 100vw;
+    background-color: rgb(13, 2, 59);
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+}
+
+nav h1{
+    width: 90vw;
+    text-align: center;
+    font-size: xx-large;
+    text-shadow: 0px 0px 20px red;
+    color: aliceblue;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.display_movie {
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #f9f7ec;
+position: relative; /* Ensure positioning for overlay */
+/* background-image: url('logo.jpg'); Replace 'background-image-url.jpg' with the URL of your background image */
+background-size: cover;
+background-position: center;
+height: auto;
+width: 100vw;
+}
+
+/* Overlay to create opacity */
+.display_movie::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+/* background-color: rgba(0, 0, 0, 0.5); Adjust opacity by changing the last value (0.5) */
+z-index: 0; /* Ensure the overlay is behind other content */
+}
+
+.show {
+display: flex;
+justify-content: space-evenly;
+/* gap: 10px; */
+align-items: center;
+flex-direction: column;
+/* margin-bottom: 30px; */
+border: 1px solid goldenrod;
+padding: 20px 0px;
+height: auto;
+width: 100vw;
+position: relative; /* Ensure correct stacking order */
+z-index: 1; /* Ensure content is above overlay */
+}
+
+.poster-container {
+width: 200px;
+height: 300px;
+overflow: hidden;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.poster {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.movies_detail {
+margin-left: 20px;
+color: white; /* Set text color to white */
+}
+
+.desc_movie{
+    width: 40vw;
+    padding: 6px 20px;
+    border-left: 1px solid  #e1e1e1;
+    border-right: 1px solid  #e1e1e1;
+    border-bottom:  2px solid rgb(243, 209, 209);
+    border-radius: 3px;
+    box-shadow: -4px -2px 2px #14213d;
+
+    /* border: 1px solid red; */
+}
+.search_movie {
+display: flex;
+align-items: center;
+/* margin-bottom: 20px; */
+justify-content: center;
+gap: 5vw;
+background-color: #b5d8e8;
+height: 12vh;
+/* border: 1px solid green; */
+width: 100vw;
+}
+
+.search_movie input[type="text"] {
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 16px;
+width: 300px;
+background-color: rgba(255, 255, 255, 0.8); /* Set input background color with opacity */
+}
+
+.search_movie button {
+padding: 10px 20px;
+background-color: #007bff;
+border: none;
+border-radius: 5px;
+color: white;
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.search_movie button:hover {
+background-color: #0056b3;
+}
+.movies_detail{
+    margin-top: 30px;
+}
+.movies_detail p {
+margin: 5px 0;
+font-size: 18px;
+color: black;
+}
+.show.movie, .search_movie {
+position: relative; /* Keep other content fixed */
+z-index: 1; /* Ensure content is above the background flow */
+}
+
+/*  Handling footer */
+footer {
+    background-color: #fb8500; /* Dark background color */
+    color: #021e3c; /* Text color */
+    padding: 50px 0; /* Vertical padding */
+    text-align: center; /* Center align content */
+    
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer-content img {
+    width: 200px; /* Adjust logo size */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Spacing between logo and text */
+    border-radius: 10px;
+}
+
+.creator-info {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    /* border: 1px solid green; */
+    gap: 4vh;/* Align text to the left */
+}
+.creator-info h1{
+    font-family:  'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.meet_the_team{
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid green; */
+    align-items: center;
+    gap: 10vw;
+    width: auto;
+}
+.creator-info h3 {
+    font-size: 20px; /* Heading size */
+    margin-bottom: 10px; /* Space below heading */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.creator-info ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0; /* display: flex;Remove default padding */
+    
+}
+
+.creator-info ul li {
+    font-size: 16px; /* List item font size */
+    margin-bottom: 10px;
+    font-family:Arial, Helvetica, sans-serif /* Space between list items */
+}
+
+@media screen and (max-width: 600px){
+    .search_movie{
+        justify-content: space-evenly;
+
+    }
+    .search_movie input[type="text"]{
+        width: 50vw;
+    }
+    .search_movie button{
+        height: auto;
+        width: 32vw;
+    }
+    .poster-container{
+        width: 70vw;
+        height: auto;
+    }
+    .movies_detail p{
+        width: 90vw;
+    }
+    .footer-content{
+        flex-direction: column;
+        justify-content: space-evenly;
+        /* border: 2px solid green; */
+        padding: 3vh 12vw;
+
+    }
+}

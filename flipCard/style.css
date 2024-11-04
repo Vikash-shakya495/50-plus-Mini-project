@@ -1,0 +1,117 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, orange, blue);
+}
+.container{
+    width: 400px;
+    height: 240px;
+    perspective: 1000px;
+    position: relative;
+    
+}
+.frontend, .backend {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    transition: transform 0.6s ease-in-out;
+    backface-visibility: hidden;
+}
+
+.frontend {
+    background-image: url('./worldMap.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-color: rgb(98, 13, 29);
+    color: rgb(253, 245, 235);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4%;
+}
+
+.container:hover .frontend{
+    transform: rotateY(180deg);
+}
+
+.frontend h2{
+    margin-left: 240px;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+}
+.frontend p{
+    font-size: 24px;
+}
+.frontend .chip img{
+    height: 50px;
+    width: 60px;
+}
+.sbilogo{
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sbilogo img{
+    height: 100px;
+    width: 100px;
+}
+
+/* backend card */
+.backend {
+    background-color: rgb(98, 13, 29);
+    color: rgb(253, 245, 235);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4%;
+    padding: 1%;
+    transform: rotateY(180deg);
+}
+
+.container:hover .backend{
+    transform: rotateY(0deg);
+}
+
+.strap{
+    background-color: black;
+    height: 50px;
+    width: 100%;
+}
+.scratch_bar{
+    position: relative;
+    height: 50px;
+    width: 100%;
+}
+
+.scratch_bar img{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(232, 222, 209);
+    object-fit: cover;
+    position: absolute;
+}
+
+.scratch_bar span{
+    color: black;
+    position: absolute;
+    top: 10px;
+    font-size: 24px;
+    right: 30px;
+}

@@ -1,0 +1,232 @@
+:root {
+    --bg-color: #f4f4f4; 
+    --text-color: #333; 
+    --container-bg: white; 
+    --button-bg: #28a745; 
+    --button-hover-bg: #218838; 
+    --repo-bg: #f9f9f9; 
+    --repo-border: #ddd; 
+    --shadow: rgba(0, 0, 0, 0.2); 
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color:var(--bg-color);
+}
+
+.container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    height: auto; 
+    padding: 40px;
+    background-color:var(--bg-color);
+}
+
+h1 {
+    text-align: center;
+    color: var(--text-color);
+    margin: 20px 0; 
+}
+
+.nav-panel{
+    margin-top: 20px;
+    display: flex;
+    width: 80%;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+
+
+.theme-selector {
+    display: flex;
+    align-items: center;
+}
+.theme-selector i {
+    margin-right: 8px; /* Space between icon and select */
+}
+.theme-selector option{
+    padding: 20px 40px;
+}
+select{
+    padding: 14px 28px;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; 
+}
+
+.search-bar i {
+    margin-right: 8px; /* Space between icon and input */
+}
+
+input {
+    flex-grow: 1;
+    padding: 14px 28px;
+    border: 1px solid #555754;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 20px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: var(--button-bg);
+}
+
+.fa-paint-brush, .fa-user{
+    filter: var(--filter);
+    font-size: 30px;
+}
+button {
+    padding: 20px 40px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--button-bg);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg);
+    transform: translateY(-2px);
+}
+
+.content {
+    display: flex;
+    width: 90%; 
+    justify-content: space-evenly;
+}
+
+#profile {
+    flex: 2; 
+    padding: 20px;
+    margin-right: 10px; 
+}
+#profile h2{
+    font-size: 3rem;
+}
+
+#profile img{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    padding: 10px;
+    border: 2px solid var(--button-bg);
+}
+#repos {
+    flex: 2; 
+}
+#repos h3{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+#repos h4{
+    font-size: 1.4rem;
+}
+.repo{
+    line-height: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--text-color);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
+    margin: 40px 0; 
+}
+
+.page-button {
+    margin-bottom: 10px; 
+    padding: 20px 50px;
+}
+
+.loader {
+    border: 8px solid rgba(0, 0, 0, 0.1); 
+    border-left-color: var(--button-bg); 
+    border-radius: 50%;
+    width: 60px; 
+    height: 60px;
+    animation: spin 1s linear infinite; 
+    margin: 20px auto;
+    text-align: center; 
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.white {
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --container-bg: white;
+    --button-bg: #28a745;
+    --button-hover-bg: #218838;
+    --repo-bg: #f9f9f9;
+    --repo-border: #ddd;
+}
+
+.dark {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --container-bg: #1e1e1e;
+    --button-bg: #1e7e34;
+    --button-hover-bg: #1a6b2a;
+    --repo-bg: #2c2c2c;
+    --repo-border: #444;
+    --filter: invert(100%);
+}
+
+.dark h1,
+.dark p,
+.dark h2,
+.dark h3,
+.dark h4 {
+    color: var(--text-color); 
+}
+
+
+.blue {
+    --bg-color: #e7f3ff;
+    --text-color: #003366;
+    --container-bg: #ffffff;
+    --button-bg: #007bff;
+    --button-hover-bg: #0056b3;
+    --repo-bg: #f0f8ff;
+    --repo-border: #b0e0e6;
+}
+
+.orange {
+    --bg-color: #fff3e0;
+    --text-color: #7a4b10;
+    --container-bg: #fff;
+    --button-bg: #ff9800;
+    --button-hover-bg: #e68a00;
+    --repo-bg: #fff8e1;
+    --repo-border: #ffcc80;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+    }
+    .nav-panel{
+        flex-direction: column;
+    }
+    .content {
+        flex-direction: column; 
+        width: 100%; 
+    }
+    #profile, #repos {
+        flex: 1; 
+        margin-right: 0; 
+    }
+}

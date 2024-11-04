@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>Interactive Quiz</h1>
+    
+    <!-- Category Selection -->
+    <div class="category-selection">
+      <label for="category">Choose a category:</label>
+      <select id="category" onchange="startQuiz()">
+        <option value="">Select Category</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="javascript">JavaScript</option>
+      </select>
+    </div>
+
+    <!-- Quiz Section -->
+    <div id="quizSection" class="hidden">
+      <div id="quiz">
+        <p id="question"></p>
+        <div class="options">
+          <button class="option" onclick="selectOption(0)">Option A</button>
+          <button class="option" onclick="selectOption(1)">Option B</button>
+          <button class="option" onclick="selectOption(2)">Option C</button>
+          <button class="option" onclick="selectOption(3)">Option D</button>
+        </div>
+      </div>
+
+      <div class="navigation">
+        <button id="prevBtn" onclick="prevQuestion()">Previous</button>
+        <button id="nextBtn" onclick="nextQuestion()">Next</button>
+      </div>
+
+      <div id="result" class="hidden">
+        <p>Your score: <span id="score"></span></p>
+        <button onclick="restartQuiz()">Restart Quiz</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
