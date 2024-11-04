@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-image">
+            <img src="./images/logo.webp" alt="">
+        </div>
+        <div class="logo">
+            <h1>Apna Gyan</h1>
+            <h3>Learn Smart Learn Anytime</h3>
+        </div>
+        <ul class="nav">
+            <li><a href="#"><img src="./images/dashboard.png" alt=""> Dashboard</a></li>
+            <li><a href="#"><img src="./images/enroll.png" alt=""> Enrolled Courses</a></li>
+            <li><a href="#"><img src="./images/activity.png" alt=""> My Quiz Attempts</a></li>
+            <li><a href="#"><img src="./images/male.png" alt="">My Instructor</a></li>
+            <li><a href="#"><img src="./images/online-course.png" alt="">My Courses</a></li>
+            <li><a href="#"><img src="./images/my-profile.png" alt=""> My Profile</a></li>
+            <li><a href="./login.html"><img src="./images/logout.png" alt=""> Log out</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <div class="top-bar">
+            <span>Dashboard</span>
+            <span class="student-name">Student Name</span>
+        </div>
+        <div class="content">
+            <div class="working">
+                <div class="streak">
+                    <h2>Consistency on Platform</h2>
+                    <div id="streak-info">
+                        <div id="current-streak">Current Streak: <span id="current-days">0</span> <img
+                                src="./images/fire.png" alt=""></div>
+                        <div id="longest-streak">Longest Streak: <span id="longest-days">0</span> <img
+                                src="./images/fire.png" alt=""></div>
+                    </div>
+                    <div id="calendar"></div>
+                </div>
+                <div class="goal">
+                    <h2>Goal Setting</h2>
+                    <div class="goal-setting-container">
+                        <label for="goal">Set a New Goal:</label>
+                        <input type="text" id="goal" placeholder="Enter your goal">
+                        <button class='add_goal' onclick="addGoal()">Add Goal</button>
+                    
+                        <ul class="goal-list" id="goal-list"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="leaderboard-container">
+                <div class="tabs">
+                    <div class="tab active" id="courses-tab">Courses</div>
+                    <div class="tab" id="overall-tab">Overall</div>
+                </div>
+                <div class="leaderboard" id="leaderboard"></div>
+                <div class="your-rank">
+                    Your Rank!<br>
+                    <span id="your-rank-name">Suraj</span> <span id="your-rank-score">0 XP</span>
+                </div>
+            </div>
+        </div>
+        <div class="progress-chart">
+            <h2>Student Details</h2>
+            <canvas id="attendanceChart"></canvas>
+            <div class="progress-container">
+                <div class="progress-card">
+                    <canvas id="courseProgress"></canvas>
+                    <p>Course Progress</p>
+                </div>
+                <div class="progress-card">
+                    <canvas id="assignmentProgress"></canvas>
+                    <p>Assignment Progress</p>
+                </div>
+                <div class="progress-card">
+                    <canvas id="quizProgress"></canvas>
+                    <p>Quiz Progress</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

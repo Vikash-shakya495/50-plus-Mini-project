@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Video Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="video-player">
+    <video id="video" src="./media/jjks01ep01.mkv"></video>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button id="playPause" onclick="togglePlayPause()">Play</button>
+      <button onclick="rewind()">⏪ Rewind</button>
+      <button onclick="fastForward()">⏩ Fast Forward</button>
+      
+      <!-- Progress Bar -->
+      <input type="range" id="progressBar" value="0" step="0.1" onchange="updateProgress()">
+
+      <!-- Volume Control -->
+      <label for="volumeControl">Volume</label>
+      <input type="range" id="volumeControl" min="0" max="1" step="0.1" onchange="changeVolume()">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

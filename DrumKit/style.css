@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #333;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  background: url('./images/drumsStage.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.keys {
+  display: flex;
+  justify-content: center;
+  gap: 6%;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.key {
+  border: 4px solid #0e14c1;
+  border-radius: 5px;
+  padding: 20px 40px;
+  text-align: center;
+  transition: all 0.07s ease-in;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.key::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+#key1::before {
+  background-image: url('./images/clap.png');
+}
+
+#key2::before {
+  background-image: url('./images/hihat.png');
+}
+
+#key3::before {
+  background-image: url('./images/kick.png');
+}
+
+#key4::before {
+  background-image: url('./images/snare.png');
+}
+
+#key5::before {
+  background-image: url('./images/tom.png');
+}
+
+#key6::before {
+  background-image: url('./images/cymbal.png');
+}
+
+.key.playing {
+  transform: scale(1.1);
+  border-color: #ffcc00;
+  box-shadow: 0px 0px 10px red, inset 0px 0px 20px black;
+}
+
+kbd {
+  display: block;
+  font-size: 2.5rem;
+}
+
+.sound {
+  font-size: 1.3rem;
+  color: #e8c330;
+}
+
+h1 {
+  position: absolute;
+  top: 10%;
+  font-size: 50px;
+  text-shadow: 2px 2px 2px rgb(38, 26, 26);
+  color: rgba(190, 184, 184, 0.992);
+  filter: drop-shadow(2px 2px 4px rgb(238, 16, 16));
+}
+
+kbd, .sound {
+  position: relative;
+  z-index: 1;
+}

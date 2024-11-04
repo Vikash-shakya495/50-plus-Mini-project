@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(2, 16, 39);
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the bar vertically and horizontally */
+}
+
+.bar {
+    padding: 20px 5%; /* Use percentage for horizontal padding */
+    background-color: rgb(255, 136, 0);
+    position: relative; /* Change to relative for shine animation */
+    color: white;
+    overflow: hidden;
+    border: none;
+    text-align: center; /* Center the text */
+    border-radius: 5px; /* Add rounded corners */
+    max-width: 600px; /* Set a maximum width for larger screens */
+    width: 90%; /* Make it responsive by using percentage */
+}
+
+.shine {
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 120px;
+    height: 50px;
+    transform: rotate(110deg);
+    animation: transform 4s ease-in-out infinite;
+}
+
+.shine::before,
+.shine::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(186, 203, 193, 0.351);
+}
+
+@keyframes transform {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 120%;
+    }
+}
+
+.shine::before {
+    top: 30%;
+    left: 80%;
+    width: 30px;
+    height: 300px;
+    transform: rotate(95deg);
+}
+
+.shine::after {
+    top: 90%;
+    left: 80%;
+    width: 10px;
+    height: 300px;
+    transform: rotate(100deg);
+}

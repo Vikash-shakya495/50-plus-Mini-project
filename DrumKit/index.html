@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Play Drum Online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="keys">
+    <div data-key="65" class="key" id="key1">
+      <kbd>A</kbd>
+      <span class="sound">Clap</span>
+    </div>
+    <div data-key="83" class="key" id="key2">
+      <kbd>S</kbd>
+      <span class="sound">HiHat</span>
+    </div>
+    <div data-key="68" class="key" id="key3">
+      <kbd>D</kbd>
+      <span class="sound">Kick</span>
+    </div>
+    <div data-key="70" class="key" id="key4">
+      <kbd>F</kbd>
+      <span class="sound">Snare</span>
+    </div>
+    <div data-key="71" class="key" id="key5">
+      <kbd>G</kbd>
+      <span class="sound">Tom</span>
+    </div>
+    <div data-key="72" class="key" id="key6">
+      <kbd>H</kbd>
+      <span class="sound">Cymbal</span>
+    </div>
+  </div>
+
+  <h1>Play Drum Online</h1>
+
+  <audio data-key="65" src="sounds/clap.wav"></audio>
+  <audio data-key="83" src="sounds/hihat.mp3"></audio>
+  <audio data-key="68" src="sounds/kick.mp3"></audio>
+  <audio data-key="70" src="sounds/snare.mp3"></audio>
+  <audio data-key="71" src="sounds/tom.mp3"></audio>
+  <audio data-key="72" src="sounds/cymbal.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

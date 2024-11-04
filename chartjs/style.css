@@ -1,0 +1,367 @@
+/* styles.css */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    scrollbar-width: none;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    background-color: #180b20;
+}
+
+.sidebar {
+    background-color: #120119;
+    width: 300px;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.sidebar .logo-image img{
+    width: 60px;
+}
+.sidebar .logo {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+}
+
+.logo h1{
+    font-size: 30px;
+}
+
+.sidebar .nav {
+    list-style-type: none;
+    padding: 0;
+    background-color: #120119;
+}
+
+.sidebar .nav li {
+    margin: 10px 0;
+}
+.nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid rgb(105, 98, 98);
+    border-radius: 12px;
+}
+.nav li a:hover{
+    filter: drop-shadow(2px 2px 4px rgb(193, 3, 3));
+}
+
+.nav li a img{
+    height: 30px;
+    margin-right: 10px;
+}
+.main-content{
+    height: auto;
+    width: 100%;
+    color: #a208fc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid green;
+    overflow-y: scroll;
+}
+
+.main-content .top-bar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 12vh;
+    border: 1px solid green;
+    color: aliceblue;
+    background-color: #170221;
+}
+.main-content .content{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    /* border: 1px solid green; */
+    color: rgb(209, 223, 7);
+    background-color: #180b20;
+}
+
+.content .working{
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+.content .working .streak{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #250234;
+    border: 1px solid green;
+    border-radius: 10px;
+}
+#streak-info {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#current-streak, #longest-streak{
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+#streak-info img{
+    width: 20px;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+    width: 90%;
+}
+
+.day {
+    background-color: #444;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.day.active {
+    background-color: #1eff00;
+    color: #180b20;
+}
+
+
+.content .working .goal{
+    border-radius: 10px;
+    border: 1px solid green;
+    padding: 10px;
+    display: flex;
+    width: 400px;
+    height: 400px;
+    gap: 16px;
+    flex-direction: column;
+}
+
+.goal-setting-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.goal-setting-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.goal-setting-container input[type="text"],
+.goal-setting-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #fff;
+}
+.goal-setting-container .add_goal{
+    background-color: #d8d105;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.goal-list button {
+    flex: 1;
+    margin: 0 5px;
+    padding: 10px;
+    color: #fff;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* filter: drop-shadow(0, 0, 0, 0.3); Adds a drop shadow */
+}
+
+.goal-list {
+    margin-top: 20px;
+    padding: 0;
+    display: flex;
+    overflow-y: scroll;
+    height: 150px;
+    flex-direction: column;
+    gap: 20px;
+    /* color: whitesmoke; */
+}
+
+.goal-list li {
+     list-style: none;
+    background-color: #333;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.goal-list li .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.goal-list li.completed {
+    text-decoration: line-through;
+}
+li.completed button:nth-child(1){
+    background-color: green;
+}
+li.completed button:nth-child(2){
+    background-color: red;
+}
+
+.goal-list button.complete {
+    margin-top: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    width: 100%; /* Makes buttons full width within the container */
+}
+
+.goal-list button.delete {
+    background-color: red;
+}
+
+
+.leaderboard-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #250234;
+    width: 100%;
+    border: 1px solid green;
+    border-radius: 14px;
+    height: 90%;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.tab.active {
+    background-color: orange;
+    color: black;
+}
+
+.leaderboard {
+    height: 240px;
+    overflow-y: scroll;
+}
+
+.student {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+
+.student .rank {
+    margin-right: 10px;
+}
+
+.your-rank {
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 2px solid #444;
+    text-align: center;
+}
+
+.trophy {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* progress chart */
+.main-content .progress-chart{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #180b20;
+
+}
+.progress-chart h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #d8d105;
+}
+
+#attendanceChart{
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+
+}
+
+.progress-card {
+    background-color: #1f0329;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+    border: 1px solid green;
+}
+
+canvas {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+}
+
+p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #d1c32c;
+}

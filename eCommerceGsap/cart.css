@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    scrollbar-width: none;
+}
+.shopping-heading{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+.shopping-heading::before{
+    content: "India | Boutiques";
+    font-size: 40px;
+    position: absolute;
+    transform: rotate(90deg);
+    top: 45%;
+    height: 100px;
+    width: 600px;
+    left: 75%;
+    animation: movedown 8s linear infinite;
+}
+@keyframes movedown {
+    0%{
+        transform: translateY(-600%) rotate(90deg);
+    }
+    100%{
+        transform: translateY(600%) rotate(90deg);
+    }
+}
+.shopping-heading::after{
+    content: "India | Boutiques";
+    font-size: 40px;
+    position: absolute;
+    transform: rotate(-90deg);
+    top: 45%;
+    left: -16%;
+    width: 600px;
+    animation: moveup 6s linear infinite;
+}
+@keyframes moveup {
+    0%{
+        transform: translateY(1000%) rotate(90deg);
+    }
+    100%{
+        transform: translateY(-1000%) rotate(90deg);
+    }
+}
+#cart-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 40px;
+    padding: 40px 120px;
+    max-height: 60vh;
+    overflow-y: scroll;
+}
+
+.cart-item{
+    display: flex;
+    border: 1px solid #260b0252;
+    padding: 20px 80px;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart-item img{
+    height: 150px;
+    width: 130px;
+}
+.cart-item div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cart-item h3{
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0px 0px 20px rgb(227, 112, 112);
+    margin-bottom: 10px;
+}
+.cart-item p{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.cart-item span{
+    font-size: 24px;
+    font-family:Helvetica, sans-serif;
+}
+
+.cart-item button{
+    padding: 20px 40px;
+    border: 1px solid brown;
+    transition: color 0.3s ease-in, background-color 0.4s ease-in-out;
+}
+.cart-item button:hover{
+    background-color: #583101;
+    color: whitesmoke;
+}
+
+.total-amount, #checkout-button{
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+.total-amount{
+    bottom: 80px;
+    left: 50%;
+    font-size: xx-large;
+}
+#checkout-button{
+    bottom: 10px;
+    left: 50%;
+    padding: 14px 30px;
+    font-size: 20px;
+    background-color: #fff5f1;
+    border: 1px solid brown;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in , color 0.2s ease-out;
+}
+
+#checkout-button:hover{
+    background-color: #c49b8e;
+    color: whitesmoke;
+}

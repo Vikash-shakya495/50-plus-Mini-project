@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button Effects</title>
+<style>
+  body {
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 0 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    border-radius: 20px;
+  }
+
+  .btn-primary .icon {
+    transition: transform 0.5s ease;
+  }
+
+  .btn-primary .text {
+    opacity: 0;
+    white-space: nowrap;
+    transform: translateX(40px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+
+  .btn-primary:hover .icon {
+    transform: translateX(-20px);
+  }
+
+  .btn-primary:hover .text {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+
+  .btn-glow {
+    background-color: white;
+    color: black;
+    border: 2px solid transparent;
+    transition: background-color 0.4s ease-in, box-shadow 0.4s ease-in;
+  }
+
+  .btn-glow:hover {
+    background-color: blueviolet;
+    color: whitesmoke;
+    box-shadow: 0 0 40px rgba(66, 5, 172, 0.8);
+  }
+
+  .btn-primary {
+    background-color: blue;
+    color: white;
+    height: 40px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-primary .icon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .btn-primary .text {
+    position: absolute;
+    right: 10px;
+  }
+</style>
+</head>
+<body>
+
+<!-- First Button -->
+<button class="btn btn-primary">
+  <span class="icon">➤</span>
+  <span class="text">Text</span>
+</button>
+
+<!-- Third Button -->
+<button class="btn btn-glow">BOTÃO</button>
+
+</body>
+</html>

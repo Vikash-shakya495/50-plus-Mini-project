@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+img {
+    height: 80%;
+    width: 80%;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20vw;
+    background-color: red;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin-left: -21vw;
+    transition: margin-left 0.4s ease-in-out, opacity 0.4s ease-in-out; /* Added transition for opacity */
+    transform: translateX(0);
+    z-index: 1;
+    opacity: 0;
+}
+
+.menu-list.opened {
+    margin-left: 0;
+    opacity: 1; /* Show the menu when opened */
+}
+
+.menu-list ul {
+    width: 90%;
+    flex-grow: 1;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.4rem;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+} 
+
+.menu_ul a{
+    text-decoration: none;
+    color: rgb(32, 102, 232);
+}
+
+.hamburger-menu {
+    margin-top: 10px;
+    height: 4vh;
+    width: 50px;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+    z-index: 2;
+    align-items: center;
+    /* Position hamburger to the left */
+    position: absolute;
+    left: 10px; /* Adjust this value as needed */
+}
+
+.hamburger-menu .bar1,
+.hamburger-menu .bar2,
+.hamburger-menu .bar3 {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    transition: transform 0.4s ease-in-out, background-color 0.4s ease-in-out;
+}
+
+.hamburger-menu.cross .bar1 {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.cross .bar3 {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.menu-list.opened ~ .hamburger-menu .bar2 {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .menu-list {
+        width: 60vw;
+    }
+}

@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #323131;
+    color: #fff;
+  }
+  
+  .video-player {
+    width: 800px;
+    background-color: #020817;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  video {
+    width: 100%;
+    border-radius: 4px;
+  }
+  
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  
+  button {
+    background-color: #4e4b4b;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #777;
+  }
+  
+  input[type="range"] {
+    width: 100px;
+    cursor: pointer;
+  }
+  
